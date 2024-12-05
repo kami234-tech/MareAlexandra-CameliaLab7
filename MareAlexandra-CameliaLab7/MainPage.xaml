@@ -2,31 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MareAlexandra_CameliaLab7.MainPage">
-
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="30">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30">
+            <Image Source="logo.png"
+                   HeightRequest="190"
+                   Aspect="AspectFit"
+                   SemanticProperties.Description="my app's logo"/>
+            <Label
+                Text="Shopping App!"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"/>
 
-            <!-- Student 1 -->
-            <Frame BorderColor="LightGray" CornerRadius="10" Padding="10">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="student1_image.jpg" HeightRequest="150" WidthRequest="150" />
-                    <Label Text="Nume: Alexandru Popescu" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                    <Label Text="Descriere: Student pasionat de programare și sport." FontSize="14" TextColor="DarkGray" />
-                </VerticalStackLayout>
-            </Frame>
+            <Label
+                Text="Wlcome to .NET Multi-platform App UI"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"/>
 
-            <!-- Student 2 -->
-            <Frame BorderColor="LightGray" CornerRadius="10" Padding="10">
-                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-                    <Image Source="student2_image.jpg" HeightRequest="150" WidthRequest="150" />
-                    <Label Text="Nume: Ioana Dumitrescu" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                    <Label Text="Descriere: Îmi place să învăț despre design și tehnologie." FontSize="14" TextColor="DarkGray" />
-                </VerticalStackLayout>
-            </Frame>
-
-            <!-- Adaugă mai mulți studenți la nevoie -->
+            <Button
+                x:Name="CounterBtn"
+                Text="Click Me"
+                SemanticProperties.Hint="Counts the number of clicks"
+                Clicked="OnCounterClicked" 
+                HorizontalOptions="Fill"
+            />
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
